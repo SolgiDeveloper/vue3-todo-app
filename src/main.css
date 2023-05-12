@@ -160,6 +160,8 @@ input:checked ~ .bubble::after {
 
 .todo-list .list {
 	margin: 1rem 0;
+	max-height: 300px;
+	overflow-y: auto;
 } 
 
 .todo-list .todo-item {
