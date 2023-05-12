@@ -1,6 +1,6 @@
 :root {
-	--primary: #EA40A4;
-	--business: #3A82EE;
+	--primary: rgb(180, 64, 234);
+	--business: rgb(205, 238, 58);
 	--personal: var(--primary);
 	--light: #EEE;
 	--grey: #888;
@@ -9,8 +9,8 @@
 
 	--shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
-	--business-glow: 0px 0px 4px rgba(58, 130, 238, 0.75);
-	--personal-glow: 0px 0px 4px rgba(234, 64, 164, 0.75);
+	--business-glow: 0px 0px 4px rgba(205, 238, 58, 0.75);
+	--personal-glow: 0px 0px 4px rgba(180, 64, 234, 0.75);
 }
 
 * {
@@ -19,7 +19,11 @@
 	box-sizing: border-box;
 	font-family: 'montserrat', sans-serif;
 }
-
+.app{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 input:not([type="radio"]):not([type="checkbox"]), button {
 	appearance: none;
 	border: none;
@@ -54,26 +58,9 @@ h4 {
 	margin-bottom: 0.5rem;
 }
 
-.greeting .title {
-	display: flex;
-}
-
-.greeting .title input {
-	margin-left: 0.5rem;
-	flex: 1 1 0%;
-	min-width: 0;
-}
-
-.greeting .title,
-.greeting .title input {
-	color: var(--dark);
-	font-size: 1.5rem;
-	font-weight: 700;
-}
-
 .create-todo input[type="text"] {
 	display: block;
-	width: 100%;
+	max-width: 500px;
 	font-size: 1.125rem;
 	padding: 1rem 1.5rem;
 	color: var(--dark);
@@ -84,6 +71,7 @@ h4 {
 }
 
 .create-todo .options {
+	max-width: 500px;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-gap: 1rem;
@@ -154,8 +142,9 @@ input:checked ~ .bubble::after {
 
 .create-todo input[type="submit"] {
 	display: block;
-	width: 100%;
+	width: 150px;
 	font-size: 1.125rem;
+	margin: 0 auto;
 	padding: 1rem 1.5rem;
 	color: #FFF;
 	background-color: var(--primary);
@@ -174,6 +163,7 @@ input:checked ~ .bubble::after {
 } 
 
 .todo-list .todo-item {
+	max-width: 500px;
 	display: flex;
 	align-items: center;
 	background-color: #FFF;
